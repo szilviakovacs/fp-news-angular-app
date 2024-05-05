@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+/* Application-wide Styles */
+
+#header{
+    width: auto;
+    height: 100px;
+    background-color: #b70100;
+    padding: 50px 250px;
+    margin: 0;
+    background-image: url('https://foxpost.hu/uploads/sign/fp_logo.png');
+    background-repeat: no-repeat;
+}
+h1 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+h2 {
+    color: #b70100;
+    font-size: 2.375rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #212121;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.left{
+    width: 16.66666%;
+    float: left;
+    display: block;
+}
+.right{
+    width: 83.33333%;
+    float: left;
+    display: block;
+}
+.horizontal-line {
+    width: 90%;
+    height: 5px;
+    margin-right: 25px;
+    background: #b70100;
+    margin-top: 55px;
+    padding: auto 0;
+}
+body {
+    margin: 0;
+}
+body, input[type="text"], button {
+    color: #333;
+    font-family: Cambria, Georgia, serif;
+}
+button {
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    }
+button:hover {
+    background-color: #898888;
+    color: white;
+}
+button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}
+    /* everywhere else */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+    color: #b70100;
+}
+ul{
+    margin: 0%;
+    padding: 0%;
+}
+li{
+    list-style: none;
+}

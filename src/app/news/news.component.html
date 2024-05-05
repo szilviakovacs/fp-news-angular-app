@@ -1,0 +1,55 @@
+<p>news works!</p>
+<article>
+    
+    <h3>{{news_default.title}}
+        <div>
+            <label for="title">Article title: </label>
+            <input id="title" [(ngModel)]="news_default.title" placeholder="title">
+        </div>
+    </h3>
+    <div style="font-weight: 500;">{{news_default.description}}</div>
+    <div>{{news_default.content}}</div>
+    <div>{{news_default.author}}</div>
+    <div><span>created at: </span>{{news_default.created_at}}</div>
+</article>
+<div *ngIf="addNews">
+    <h2>Add article:</h2>
+    <div>
+      <label for="news-title">Title: </label>
+      <input id="news-title" [(ngModel)]="newNews.title" placeholder="title">
+    </div>
+    <div>
+        <label for="news-description">description: </label>
+        <input id="news-description" [(ngModel)]="newNews.description" placeholder="description">
+    </div>
+    <div>
+        <label for="news-content">Content: </label>
+        <input id="news-content" [(ngModel)]="newNews.content" placeholder="content">
+    </div>
+    <div>
+        <label for="news-author">author: </label>
+        <input id="news-author" [(ngModel)]="newNews.author" placeholder="author">
+    </div>
+</div>
+<div *ngIf="selectedNews">
+    <h2>{{selectedNews.title | uppercase}}</h2>
+    <div>created at: {{selectedHero.created_at}}</div>
+    <div style="font-weight: 600;">
+        {{selectedNews.description}}
+    </div>
+    <div style="font-weight: 400;">
+        {{selectedNews.content}}
+    </div>
+    <div style="font-weight: 800;">
+        {{selectedNews.author}}
+    </div>
+</div>
+<ul class="news, mat-list">
+    <li class="mat-list-item" *ngFor="let news of this.news_list; index as i; first as isFirst">
+        <button [class.selected]="news === selectedNews" type="button" (click)="onSelect(news)">
+            <h3>{{news.title}}</h3>
+            <span *ngIf="isFirst">default</span>
+            <div style="font-weight: 500;">{{news.description}}</div>
+        </button>
+    </li>
+</ul>
